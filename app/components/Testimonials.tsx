@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Testimonials() {
   const testimonials = [
     {
@@ -23,13 +25,26 @@ export function Testimonials() {
   return (
     <section id="testimonials" className="bg-white px-6 py-20 md:py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-4 h-1 w-16 bg-[#2EC4A7]"></div>
-        <h2 className="mb-4 text-4xl font-semibold text-[#0D2A4D] md:text-5xl">
-          What Our Clients Say
-        </h2>
-        <p className="mb-16 text-xl text-gray-600 max-w-2xl">
-          Real feedback from companies we've helped launch and grow
-        </p>
+        <div className="grid gap-12 md:grid-cols-2 items-start mb-16">
+          <div>
+            <div className="mb-4 h-1 w-16 bg-[#2EC4A7]"></div>
+            <h2 className="mb-4 text-4xl font-semibold text-[#0D2A4D] md:text-5xl">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-600">
+              Real feedback from companies we've helped launch and grow
+            </p>
+          </div>
+          <div className="flex justify-center md:justify-end">
+            <Image
+              src="/assets/makeship_testimonials.png"
+              alt="Client Testimonials"
+              width={300}
+              height={300}
+              className="h-auto w-full max-w-xs object-contain"
+            />
+          </div>
+        </div>
 
         <div className="grid gap-8 md:grid-cols-3">
           {testimonials.map((testimonial, index) => (

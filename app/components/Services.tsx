@@ -38,7 +38,7 @@ export function Services() {
     <section id="services" className="bg-white px-6 py-20 md:py-32">
       <div className="mx-auto max-w-6xl">
         <div className="mb-4 h-1 w-16 bg-[#2EC4A7]"></div>
-        <h2 className="mb-4 text-4xl font-semibold text-[#0D2A4D] md:text-5xl">
+        <h2 className="mb-6 text-4xl font-semibold text-[#0D2A4D] md:text-5xl">
           What We Do
         </h2>
         <p className="mb-16 text-xl text-gray-600 max-w-2xl">
@@ -51,7 +51,7 @@ export function Services() {
               key={index}
               className="rounded-xl border-l-4 border-[#2EC4A7] bg-white p-8 shadow-sm transition hover:shadow-md hover:border-[#FF6F3C]"
             >
-              <div className="mb-4 h-12 w-12 relative">
+              <div className="mb-4 relative h-12 w-12">
                 <Image
                   src={service.image}
                   alt={service.title}

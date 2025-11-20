@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section className="bg-white px-6 pb-20 pt-32 md:pb-32 md:pt-48">
       <div className="mx-auto max-w-6xl">
-        <div className="grid items-center gap-12 md:grid-cols-2">
+        <div className="grid items-center gap-16 md:grid-cols-2">
           <div>
             <div className="mb-6 h-1 w-16 bg-[#2EC4A7]"></div>
             <h1 className="mb-6 text-5xl font-bold leading-tight text-[#0D2A4D] md:text-6xl">
@@ -28,14 +28,14 @@ export function Hero() {
               </a>
             </div>
           </div>
-          <div className="relative flex items-center justify-center md:h-auto">
+          <div className="relative flex items-center justify-center">
             <Image
-              src="/makeship_hero.png"
-              alt="Makeship"
-              width={500}
-              height={500}
+              src="/assets/makeship_shipping_o.png"
+              alt="Makeship - Build and Ship"
+              width={450}
+              height={450}
               priority
-              className="relative z-10 h-1/2 w-1/2 object-contain"
+              className="relative z-10 h-80 w-80 object-contain md:h-96 md:w-96"
             />
           </div>
         </div>

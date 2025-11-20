@@ -3,7 +3,7 @@ export function About() {
     <section id="about" className="bg-white px-6 py-20 md:py-32">
       <div className="mx-auto max-w-4xl">
         <div className="mb-4 h-1 w-16 bg-[#2EC4A7]"></div>
-        <h2 className="mb-8 text-4xl font-bold text-[#0D2A4D] md:text-5xl">
+        <h2 className="mb-8 text-4xl font-semibold text-[#0D2A4D] md:text-5xl">
           About Makeship
         </h2>
         <div className="space-y-6">

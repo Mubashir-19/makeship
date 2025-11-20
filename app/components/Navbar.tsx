@@ -13,7 +13,7 @@ export function Navbar() {
             priority
             className="h-10 w-10"
           />
-          <span className="text-xl font-bold text-[#0D2A4D]">
+          <span className="text-xl font-semibold text-[#0D2A4D]">
             MakeShip<span className="text-[#2EC4A7]">.dev</span>
           </span>
         </div>

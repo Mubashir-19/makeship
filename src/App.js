@@ -8,20 +8,17 @@ import {
   Infinity, 
   ArrowRight, 
   Code2,
-  Send,
   CheckCircle2,
   Linkedin,
   Twitter,
   Mail,
   Facebook,
   User,
-  AtSign,
   MessageSquare,
   Clock,
   DollarSign,
   Layers,
   Search,
-  Target,
   ChevronDown,
   Lightbulb,
   Rocket,
@@ -29,7 +26,6 @@ import {
   TrendingUp,
   Database,
   Layout,
-  HelpCircle,
   Cpu,
   Sun,
   Moon,
@@ -64,7 +60,7 @@ const Reveal = ({ children, className = "", delay = 0 }) => {
     }
 
     return () => {
-      if (ref.current) observer.disconnect();
+      observer.disconnect();
     };
   }, []);
 
@@ -144,7 +140,7 @@ const App = () => {
   // Initialize refs array
   useEffect(() => {
     sectionRefs.current = sectionRefs.current.slice(0, sections.length);
-  }, []);
+  }, [sections.length]);
 
   // --- Fixed Scroll Spy Logic ---
   useEffect(() => {
@@ -395,7 +391,7 @@ const App = () => {
                     <div className="pl-8 text-[var(--text-muted)]">blockchain: <span className="text-[var(--accent-emerald)]">'integrated'</span>,</div>
                     <div className="pl-8 text-[var(--text-muted)]">support: <span className="text-[var(--accent-emerald)]">'lifetime'</span></div>
                     <div className="text-[var(--text-main)]">{'}'});</div>
-                    <div className="text-[var(--text-muted)] mt-6">// Production ready in record time</div>
+                      <div className="text-[var(--text-muted)] mt-6">{'// Production ready in record time'}</div>
                     <div className="h-2 w-32 bg-cyan-500/50 animate-pulse rounded mt-2" />
                   </div>
                </div>
@@ -860,10 +856,10 @@ const App = () => {
                 Made by <span className="text-[var(--text-muted)] font-bold hover:text-[var(--accent-emerald)] cursor-pointer transition-colors">makeship.dev</span> team with love.
              </div>
              <div className="flex items-center gap-6">
-                <a href="#" className="hover:text-[var(--accent-emerald)] transition-colors"><Linkedin className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-[var(--accent-emerald)] transition-colors"><Twitter className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-[var(--accent-emerald)] transition-colors"><Mail className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-[var(--accent-emerald)] transition-colors"><Facebook className="w-4 h-4" /></a>
+               <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="hover:text-[var(--accent-emerald)] transition-colors"><Linkedin className="w-4 h-4" /></a>
+               <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-[var(--accent-emerald)] transition-colors"><Twitter className="w-4 h-4" /></a>
+               <a href="mailto:hello@makeship.dev" className="hover:text-[var(--accent-emerald)] transition-colors"><Mail className="w-4 h-4" /></a>
+               <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="hover:text-[var(--accent-emerald)] transition-colors"><Facebook className="w-4 h-4" /></a>
              </div>
           </div>
         </section>

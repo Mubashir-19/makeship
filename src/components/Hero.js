@@ -12,8 +12,8 @@ const Hero = ({ scrollToSection, isDarkMode }) => {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(251,191,36,0.1),transparent_40%)] animate-pulse" style={{ animationDuration: '4s' }} />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(217,119,6,0.08),transparent_40%)] animate-pulse" style={{ animationDuration: '7s' }} />
 
-            <div className="max-w-7xl w-full z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-                <div className="space-y-8">
+            <div className="max-w-4xl w-full z-10 flex flex-col items-center justify-center text-center gap-12">
+                <div className="space-y-8 flex flex-col items-center">
                     <Reveal>
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-[var(--accent-amber)] text-xs font-medium uppercase tracking-widest">
                             <span className="relative flex h-2 w-2">
@@ -26,21 +26,18 @@ const Hero = ({ scrollToSection, isDarkMode }) => {
 
                     <Reveal delay={200}>
                         <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight text-[var(--text-main)]">
-                            Make it <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
-                                Ship it.
-                            </span>
+                            Make it <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">Ship it</span>
                         </h1>
                     </Reveal>
 
                     <Reveal delay={400}>
-                        <p className="text-[var(--text-muted)] text-lg md:text-xl max-w-lg leading-relaxed">
+                        <p className="text-[var(--text-muted)] text-lg md:text-xl max-w-lg leading-relaxed mx-auto">
                             makeship.dev is your elite engineering partner. We craft scalable Blockchain apps, Agentic AI, and high-performance SaaS platforms.
                         </p>
                     </Reveal>
 
                     <Reveal delay={600}>
-                        <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                        <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                             <button
                                 onClick={() => scrollToSection(3)}
                                 className="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(251,191,36,0.4)] flex items-center justify-center gap-2"
@@ -57,37 +54,15 @@ const Hero = ({ scrollToSection, isDarkMode }) => {
                     </Reveal>
                 </div>
 
-                {/* Abstract visual representation of code/structure */}
-                <div className="hidden lg:block relative h-[500px] w-full">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-2xl blur-3xl animate-float" />
-                    <div className="relative h-full w-full bg-[var(--bg-card)] backdrop-blur-sm border border-[var(--border)] rounded-2xl p-8 shadow-2xl flex flex-col gap-6 animate-float-delayed">
-                        <div className="flex items-center gap-2">
-                            <div className="w-3 h-3 rounded-full bg-amber-500/50" />
-                            <div className="w-3 h-3 rounded-full bg-orange-500/50" />
-                            <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-                        </div>
-                        <div className="space-y-4 font-mono text-sm md:text-base opacity-70">
-                            <div className="flex flex-wrap gap-x-3 gap-y-1">
-                                <span className="text-[var(--accent-amber)]">const</span>
-                                <span className="text-[var(--accent-amber)]">future</span>
-                                <span className="text-[var(--text-main)]">=</span>
-                                <span className="text-[var(--accent-amber)]">await</span>
-                                <span className="text-amber-400">makeship</span>
-                                <span className="text-[var(--text-main)]">.</span>
-                                <span className="text-orange-300">build</span>
-                                <span className="text-[var(--text-main)]">({'{'}</span>
-                            </div>
-                            <div className="pl-8 text-[var(--text-muted)]">scale: <span className="text-[var(--accent-amber)]">'unlimited'</span>,</div>
-                            <div className="pl-8 text-[var(--text-muted)]">ai: <span className="text-[var(--accent-amber)]">true</span>,</div>
-                            <div className="pl-8 text-[var(--text-muted)]">security: <span className="text-[var(--accent-amber)]">'max'</span>,</div>
-                            <div className="pl-8 text-[var(--text-muted)]">blockchain: <span className="text-[var(--accent-amber)]">'integrated'</span>,</div>
-                            <div className="pl-8 text-[var(--text-muted)]">support: <span className="text-[var(--accent-amber)]">'lifetime'</span></div>
-                            <div className="text-[var(--text-main)]">{'}'});</div>
-                            <div className="text-[var(--text-muted)] mt-6">{'// Production ready in record time'}</div>
-                            <div className="h-2 w-32 bg-amber-500/50 animate-pulse rounded mt-2" />
-                        </div>
+                <Reveal delay={800}>
+                    <div className="relative w-80 h-80 md:w-[36rem] md:h-[36rem] mx-auto mt-12">
+                        <img
+                            src={require('../assets/hero-boat.png')}
+                            alt="Ship it"
+                            className="w-full h-full object-contain filter drop-shadow-[0_0_20px_rgba(251,191,36,0.2)]"
+                        />
                     </div>
-                </div>
+                </Reveal>
             </div>
         </section>
     );

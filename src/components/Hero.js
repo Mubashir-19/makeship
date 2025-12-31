@@ -16,13 +16,10 @@ const Hero = ({ scrollToSection, isDarkMode }) => {
             }} />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(251,191,36,0.1),transparent_40%)] animate-pulse" style={{ animationDuration: '4s' }} />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(217,119,6,0.08),transparent_40%)] animate-pulse" style={{ animationDuration: '7s' }} />
-
-
             {/* Logo */}
             <div className="absolute top-6 left-6 md:top-10 md:left-20 z-20">
                 <div className="flex items-center gap-3">
-                    <img src={require('../assets/logo.png')} alt="MakeShip Logo" className="h-10 w-10 md:h-12 md:w-12 rounded-lg" />
-                    <span className="text-xl font-bold tracking-tight text-[var(--text-main)] hidden sm:block">makeship.dev</span>
+                    <img src="/favicon.png" alt="MakeShip Logo" className="h-10 w-10 md:h-12 md:w-12 rounded-lg" />
                 </div>
             </div>
 

@@ -8,7 +8,7 @@ const logos = [
     '/client_logos/theimplantengine.png',
 ];
 
-const ClientLogos = () => {
+const ClientLogos = ({ isDarkMode }) => {
     return (
         <div className="w-full py-10 bg-[var(--bg-main)] overflow-hidden relative">
             <style>{`
@@ -44,7 +44,7 @@ const ClientLogos = () => {
                             <img
                                 src={logo}
                                 alt="Client Logo"
-                                className="h-12 md:h-16 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                                className={`h-12 md:h-16 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ${!isDarkMode ? 'invert' : ''}`}
                             />
                         </div>
                     ))}
@@ -55,7 +55,7 @@ const ClientLogos = () => {
                             <img
                                 src={logo}
                                 alt="Client Logo"
-                                className="h-12 md:h-16 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                                className={`h-12 md:h-16 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ${!isDarkMode ? 'invert' : ''}`}
                             />
                         </div>
                     ))}
@@ -66,7 +66,7 @@ const ClientLogos = () => {
                             <img
                                 src={logo}
                                 alt="Client Logo"
-                                className="h-12 md:h-16 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                                className={`h-12 md:h-16 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ${!isDarkMode ? 'invert' : ''}`}
                             />
                         </div>
                     ))}

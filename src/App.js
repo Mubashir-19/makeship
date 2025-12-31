@@ -171,7 +171,7 @@ const App = () => {
         {/* SECTION 1: HERO */}
         <div ref={el => sectionRefs.current[0] = el} data-index="0">
           <Hero scrollToSection={scrollToSection} isDarkMode={isDarkMode} />
-          <ClientLogos />
+          <ClientLogos isDarkMode={isDarkMode} />
         </div>
 
         {/* SECTION 2: SERVICES */}

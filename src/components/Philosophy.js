@@ -67,16 +67,16 @@ const Philosophy = ({ isDarkMode }) => {
                             </div>
 
                             <div className="space-y-4">
-                                {['API Latency', 'Database Health', 'Server Load', 'Error Rate'].map((metric, i) => (
+                                {['Database Health', 'Server Load', 'Error Rate'].map((metric, i) => (
                                     <div key={i} className="space-y-2">
                                         <div className="flex justify-between text-xs font-bold text-[var(--text-muted)] uppercase">
                                             <span>{metric}</span>
-                                            <span className="text-[var(--accent-emerald)]">{i === 3 ? '0.00%' : '99.9%'}</span>
+                                            <span className="text-[var(--accent-emerald)]">{i === 2 ? '0.00%' : '99.9%'}</span>
                                         </div>
                                         <div className="h-2 w-full bg-[var(--bg-input)] rounded-full overflow-hidden">
                                             <div
                                                 className={`h-full rounded-full transition-all duration-1000 ${i === 2 ? 'bg-[var(--accent-amber)]' : 'bg-[var(--accent-emerald)]'}`}
-                                                style={{ width: i === 3 ? '1%' : `${85 + Math.random() * 10}%` }}
+                                                style={{ width: i === 2 ? '1%' : `${85 + Math.random() * 10}%` }}
                                             />
                                         </div>
                                     </div>

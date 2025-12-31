@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Sun, Moon } from 'lucide-react';
+import { useRef, useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import ClientLogos from './components/ClientLogos';
 import Hero from './components/Hero';
@@ -9,22 +8,35 @@ import Contact from './components/Contact';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState(0);
-  const [isDarkMode, setIsDarkMode] = useState(true); // Default to Dark Mode
+  const [isDarkMode, setIsDarkMode] = useState(
+    typeof window !== 'undefined' && window.matchMedia
+      ? window.matchMedia('(prefers-color-scheme: dark)').matches
+      : true
+  );
 
   const containerRef = useRef(null);
   const sectionRefs = useRef([]);
 
   const sections = [
-    { id: 'hero', label: 'Welcome', color: 'bg-cyan-500', text: 'text-cyan-500' },
-    { id: 'services', label: 'Our Craft', color: 'bg-violet-500', text: 'text-violet-500' },
+    { id: 'hero', label: 'Welcome', color: 'bg-amber-500', text: 'text-amber-500' },
+    { id: 'services', label: 'Our Craft', color: 'bg-amber-500', text: 'text-amber-500' },
     { id: 'philosophy', label: 'Why Us', color: 'bg-amber-500', text: 'text-amber-500' },
-    { id: 'contact', label: 'Start Now', color: 'bg-emerald-500', text: 'text-emerald-500' },
+    { id: 'contact', label: 'Start Now', color: 'bg-amber-500', text: 'text-amber-500' },
   ];
 
   // Initialize refs array
   useEffect(() => {
     sectionRefs.current = sectionRefs.current.slice(0, sections.length);
   }, [sections.length]);
+
+  // Listen for system theme changes
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e) => setIsDarkMode(e.matches);
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
 
   // --- Fixed Scroll Spy Logic ---
   useEffect(() => {
@@ -71,31 +83,29 @@ const App = () => {
     }
   };
 
-  const toggleTheme = () => setIsDarkMode(!isDarkMode);
-
   return (
-    <div className={`relative h-screen w-full overflow-hidden font-sans selection:bg-cyan-500/30 transition-colors duration-500 bg-[var(--bg-main)] text-[var(--text-main)]`}>
+    <div className={`relative h-screen w-full overflow-hidden font-sans selection:bg-amber-500/30 transition-colors duration-500 bg-[var(--bg-main)] text-[var(--text-main)]`}>
 
       {/* Dynamic Theme Styles */}
       <style>{`
         :root {
           /* Color Palette Variables */
-          --bg-main: ${isDarkMode ? '#020617' : '#f8fafc'};      /* slate-950 vs slate-50 */
-          --bg-card: ${isDarkMode ? 'rgba(15, 23, 42, 0.6)' : 'rgba(255, 255, 255, 0.7)'}; /* slate-900/60 vs white/70 */
+          --bg-main: ${isDarkMode ? '#020617' : '#fffbeb'};      /* slate-950 vs amber-50 */
+          --bg-card: ${isDarkMode ? 'rgba(15, 23, 42, 0.6)' : 'rgba(255, 255, 255, 0.7)'}; 
           --bg-card-solid: ${isDarkMode ? '#0f172a' : '#ffffff'};
-          --bg-input: ${isDarkMode ? '#020617' : '#f1f5f9'};     /* slate-950 vs slate-100 */
+          --bg-input: ${isDarkMode ? '#020617' : '#fff7ed'};     /* slate-950 vs amber-50 */
           
-          --text-main: ${isDarkMode ? '#f8fafc' : '#0f172a'};    /* slate-50 vs slate-900 */
-          --text-muted: ${isDarkMode ? '#94a3b8' : '#64748b'};   /* slate-400 vs slate-500 */
+          --text-main: ${isDarkMode ? '#f8fafc' : '#451a03'};    /* slate-50 vs amber-950 */
+          --text-muted: ${isDarkMode ? '#94a3b8' : '#78350f'};   /* slate-400 vs amber-900 */
           
-          --border: ${isDarkMode ? 'rgba(30, 41, 59, 0.5)' : 'rgba(203, 213, 225, 0.8)'}; /* slate-800/50 vs slate-300/80 */
-          --border-hover: ${isDarkMode ? 'rgba(71, 85, 105, 0.8)' : 'rgba(148, 163, 184, 0.8)'};
+          --border: ${isDarkMode ? 'rgba(30, 41, 59, 0.5)' : 'rgba(251, 191, 36, 0.3)'}; 
+          --border-hover: ${isDarkMode ? 'rgba(71, 85, 105, 0.8)' : 'rgba(245, 158, 11, 0.5)'};
 
-          /* Accents - Darker in light mode for contrast */
-          --accent-cyan: ${isDarkMode ? '#22d3ee' : '#0891b2'};  /* cyan-400 vs cyan-600 */
-          --accent-violet: ${isDarkMode ? '#a78bfa' : '#7c3aed'}; /* violet-400 vs violet-600 */
-          --accent-emerald: ${isDarkMode ? '#34d399' : '#059669'}; /* emerald-400 vs emerald-600 */
-          --accent-amber: ${isDarkMode ? '#fbbf24' : '#d97706'};  /* amber-400 vs amber-600 */
+          /* Accents - Monochrome Amber Theme */
+          --accent-cyan: ${isDarkMode ? '#fbbf24' : '#d97706'};    /* Mapped to Amber */
+          --accent-violet: ${isDarkMode ? '#fbbf24' : '#d97706'};  /* Mapped to Amber */
+          --accent-emerald: ${isDarkMode ? '#fbbf24' : '#d97706'}; /* Mapped to Amber */
+          --accent-amber: ${isDarkMode ? '#fbbf24' : '#d97706'};   /* Amber-400 vs Amber-600 */
         }
 
         .no-scrollbar::-webkit-scrollbar {
@@ -142,18 +152,6 @@ const App = () => {
           color: var(--text-muted);
         }
       `}</style>
-
-      {/* Theme Toggle Button */}
-      <button
-        onClick={toggleTheme}
-        className="fixed top-6 left-6 z-50 p-3 rounded-full bg-[var(--bg-card-solid)] border border-[var(--border)] text-[var(--text-main)] shadow-lg hover:scale-110 transition-transform duration-300 group"
-      >
-        {isDarkMode ? (
-          <Sun className="w-5 h-5 group-hover:text-amber-400 transition-colors" />
-        ) : (
-          <Moon className="w-5 h-5 group-hover:text-violet-600 transition-colors" />
-        )}
-      </button>
 
       {/* Navigation */}
       <Navbar

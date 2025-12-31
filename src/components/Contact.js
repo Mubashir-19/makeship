@@ -83,12 +83,12 @@ const Contact = () => {
             id="contact"
             className="min-h-screen w-full flex flex-col items-center justify-center py-24 px-4 relative bg-[var(--bg-main)]"
         >
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(16,185,129,0.05),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(251,191,36,0.05),transparent_50%)]" />
 
             <div className="max-w-7xl w-full z-10 mb-20">
                 <Reveal>
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl lg:text-6xl font-bold text-[var(--text-main)] mb-4">Let's build something <span className="text-[var(--accent-emerald)]">legendary.</span></h2>
+                        <h2 className="text-4xl lg:text-6xl font-bold text-[var(--text-main)] mb-4">Let's build something <span className="text-[var(--accent-amber)]">legendary.</span></h2>
                         <p className="text-[var(--text-muted)] text-lg">Tell us about your project to get a free consultation within 24 hours.</p>
                     </div>
                 </Reveal>
@@ -108,10 +108,10 @@ const Contact = () => {
                                 </h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="relative group/input">
-                                        <input type="text" placeholder="Name" className="w-full bg-[var(--bg-input)] border border-[var(--border)] rounded-xl px-4 py-3 text-[var(--text-main)] focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all outline-none" required />
+                                        <input type="text" placeholder="Name" className="w-full bg-[var(--bg-input)] border border-[var(--border)] rounded-xl px-4 py-3 text-[var(--text-main)] focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all outline-none" required />
                                     </div>
                                     <div className="relative group/input">
-                                        <input type="email" placeholder="Email" className="w-full bg-[var(--bg-input)] border border-[var(--border)] rounded-xl px-4 py-3 text-[var(--text-main)] focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all outline-none" required />
+                                        <input type="email" placeholder="Email" className="w-full bg-[var(--bg-input)] border border-[var(--border)] rounded-xl px-4 py-3 text-[var(--text-main)] focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all outline-none" required />
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +203,7 @@ const Contact = () => {
                                                                     </div>
 
                                                                     {/* Selected Indicator */}
-                                                                    <div className="check-indicator absolute top-3 right-3 w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center opacity-0 scale-50 transition-all duration-300 shadow-md">
+                                                                    <div className="check-indicator absolute top-3 right-3 w-5 h-5 rounded-full bg-amber-500 text-white flex items-center justify-center opacity-0 scale-50 transition-all duration-300 shadow-md">
                                                                         <CheckCircle2 className="w-3.5 h-3.5" />
                                                                     </div>
                                                                 </div>
@@ -265,12 +265,12 @@ const Contact = () => {
                             {/* Description Box */}
                             <div className="bg-[var(--bg-card-solid)] p-6 rounded-2xl border border-[var(--border)] hover:border-[var(--border-hover)] transition-all">
                                 <h3 className="text-sm font-bold text-[var(--text-muted)] uppercase tracking-widest mb-4 flex items-center gap-2">
-                                    <MessageSquare className="w-4 h-4 text-[var(--accent-emerald)]" /> Additional Details
+                                    <MessageSquare className="w-4 h-4 text-[var(--accent-amber)]" /> Additional Details
                                 </h3>
-                                <textarea rows="4" placeholder="Any specific requirements, competitors, or questions?" className="w-full bg-[var(--bg-input)] border border-[var(--border)] rounded-xl px-4 py-3 text-[var(--text-main)] focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all outline-none resize-none placeholder-slate-500/50"></textarea>
+                                <textarea rows="4" placeholder="Any specific requirements, competitors, or questions?" className="w-full bg-[var(--bg-input)] border border-[var(--border)] rounded-xl px-4 py-3 text-[var(--text-main)] focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all outline-none resize-none placeholder-slate-500/50"></textarea>
                             </div>
 
-                            <button className="w-full py-5 rounded-2xl bg-[var(--accent-emerald)] text-white font-bold text-lg hover:brightness-110 transition-all shadow-[0_4px_20px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_30px_rgba(16,185,129,0.4)] transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3">
+                            <button className="w-full py-5 rounded-2xl bg-[var(--accent-amber)] text-white font-bold text-lg hover:brightness-110 transition-all shadow-[0_4px_20px_rgba(251,191,36,0.3)] hover:shadow-[0_8px_30px_rgba(251,191,36,0.4)] transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3">
                                 <Rocket className="w-6 h-6" /> Launch Project
                             </button>
 

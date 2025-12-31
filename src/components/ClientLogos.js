@@ -10,7 +10,7 @@ const logos = [
 
 const ClientLogos = ({ isDarkMode }) => {
     return (
-        <div className="w-full py-10 bg-[var(--bg-main)] overflow-hidden relative">
+        <div className="w-full pt-4 pb-10 bg-[var(--bg-main)] overflow-hidden relative">
             <style>{`
             @keyframes marquee {
                 0% { transform: translateX(0); }

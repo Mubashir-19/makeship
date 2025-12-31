@@ -60,9 +60,9 @@ const Philosophy = ({ isDarkMode }) => {
                         <div className="relative z-10 bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-6 md:p-8 shadow-2xl hover:border-amber-500/30 transition-colors duration-500">
                             <div className="flex justify-between items-center mb-8">
                                 <div className="text-sm font-mono text-[var(--text-muted)]">System Status</div>
-                                <div className="flex items-center gap-2 px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">
-                                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                                    <span className="text-xs font-bold text-[var(--accent-emerald)] uppercase">Operational</span>
+                                <div className="flex items-center gap-2 px-3 py-1 bg-amber-500/10 rounded-full border border-amber-500/20">
+                                    <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+                                    <span className="text-xs font-bold text-[var(--accent-amber)] uppercase">Operational</span>
                                 </div>
                             </div>
 
@@ -71,11 +71,11 @@ const Philosophy = ({ isDarkMode }) => {
                                     <div key={i} className="space-y-2">
                                         <div className="flex justify-between text-xs font-bold text-[var(--text-muted)] uppercase">
                                             <span>{metric}</span>
-                                            <span className="text-[var(--accent-emerald)]">{i === 2 ? '0.00%' : '99.9%'}</span>
+                                            <span className="text-[var(--accent-amber)]">{i === 2 ? '0.00%' : '99.9%'}</span>
                                         </div>
                                         <div className="h-2 w-full bg-[var(--bg-input)] rounded-full overflow-hidden">
                                             <div
-                                                className={`h-full rounded-full transition-all duration-1000 ${i === 2 ? 'bg-[var(--accent-amber)]' : 'bg-[var(--accent-emerald)]'}`}
+                                                className={`h-full rounded-full transition-all duration-1000 ${i === 2 ? 'bg-[var(--accent-amber)]' : 'bg-[var(--accent-amber)]'}`}
                                                 style={{ width: i === 2 ? '1%' : `${85 + Math.random() * 10}%` }}
                                             />
                                         </div>

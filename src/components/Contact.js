@@ -29,6 +29,29 @@ import Reveal from './Reveal';
 const Contact = () => {
     const [selectedCategories, setSelectedCategories] = useState(['web']); // Multi-select support
     const [projectTypeMode, setProjectTypeMode] = useState('select'); // 'select' | 'describe'
+    const [submitting, setSubmitting] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setSubmitting(true);
+
+        const formData = new FormData(e.target);
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbzoBjgeRM9mv-miCWd2VBrLNPRsxpXXawJtrpq0Z4NF1WTw2SATy_Fj5tfer6EMrMz0Rw/exec';
+
+        try {
+            await fetch(scriptUrl, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Google Script requires no-cors if not using a redirect
+            });
+            setSubmitted(true);
+        } catch (error) {
+            console.error('Error!', error.message);
+        } finally {
+            setSubmitting(false);
+        }
+    };
 
     // Data for Progressive Disclosure Form
     const projectCategories = [
@@ -94,7 +117,7 @@ const Contact = () => {
                 </Reveal>
 
                 {/* BENTO FORM CONTAINER */}
-                <form onSubmit={(e) => e.preventDefault()} className="glass-panel p-6 md:p-10 rounded-3xl relative">
+                <form onSubmit={handleSubmit} className="glass-panel p-6 md:p-10 rounded-3xl relative">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
@@ -108,10 +131,10 @@ const Contact = () => {
                                 </h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="relative group/input">
-                                        <input type="text" placeholder="Name" className="w-full bg-[var(--bg-input)] border border-[var(--border)] rounded-xl px-4 py-3 text-[var(--text-main)] focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all outline-none" required />
+                                        <input name="name" type="text" placeholder="Name" className="w-full bg-[var(--bg-input)] border border-[var(--border)] rounded-xl px-4 py-3 text-[var(--text-main)] focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all outline-none" required />
                                     </div>
                                     <div className="relative group/input">
-                                        <input type="email" placeholder="Email" className="w-full bg-[var(--bg-input)] border border-[var(--border)] rounded-xl px-4 py-3 text-[var(--text-main)] focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all outline-none" required />
+                                        <input name="email" type="email" placeholder="Email" className="w-full bg-[var(--bg-input)] border border-[var(--border)] rounded-xl px-4 py-3 text-[var(--text-main)] focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all outline-none" required />
                                     </div>
                                 </div>
                             </div>
@@ -192,7 +215,7 @@ const Contact = () => {
                                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                                         {projectSubtypes[catId].map((item) => (
                                                             <label key={item.name} className="cursor-pointer group relative">
-                                                                <input type="checkbox" name="project_type" className="card-radio hidden" />
+                                                                <input type="checkbox" name="project_type" value={item.name} className="card-radio hidden" />
                                                                 <div className="h-full p-4 rounded-xl bg-[var(--bg-input)] border border-[var(--border)] flex items-start gap-4 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-[var(--border-hover)] group-hover:shadow-lg">
                                                                     <div className="icon-box p-2 rounded-lg bg-[var(--bg-card-solid)] text-[var(--text-muted)] group-hover:text-[var(--text-main)] transition-colors shrink-0 mt-1">
                                                                         <item.icon className="w-5 h-5" />
@@ -222,6 +245,7 @@ const Contact = () => {
                                                 What exactly do you need?
                                             </label>
                                             <textarea
+                                                name="project_description"
                                                 className="w-full h-40 bg-transparent border-0 focus:ring-0 text-[var(--text-main)] placeholder-slate-500/50 resize-none"
                                                 placeholder="e.g. I need a Tinder-style app but for adopting shelter dogs, with a subscription model for shelters..."
                                             />
@@ -252,7 +276,7 @@ const Contact = () => {
                                         { label: "Scaling", icon: TrendingUp }
                                     ].map((stage) => (
                                         <label key={stage.label} className="cursor-pointer flex-1 min-w-[140px]">
-                                            <input type="radio" name="stage" className="card-radio hidden" />
+                                            <input type="radio" name="stage" value={stage.label} className="card-radio hidden" />
                                             <div className="flex items-center gap-3 p-3 rounded-xl bg-[var(--bg-input)] border border-[var(--border)] transition-all hover:border-[var(--border-hover)]">
                                                 <stage.icon className="w-4 h-4 text-[var(--text-muted)] icon-box" />
                                                 <span className="text-sm font-medium text-[var(--text-muted)]">{stage.label}</span>
@@ -267,11 +291,19 @@ const Contact = () => {
                                 <h3 className="text-sm font-bold text-[var(--text-muted)] uppercase tracking-widest mb-4 flex items-center gap-2">
                                     <MessageSquare className="w-4 h-4 text-[var(--accent-amber)]" /> Additional Details
                                 </h3>
-                                <textarea rows="4" placeholder="Any specific requirements, competitors, or questions?" className="w-full bg-[var(--bg-input)] border border-[var(--border)] rounded-xl px-4 py-3 text-[var(--text-main)] focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all outline-none resize-none placeholder-slate-500/50"></textarea>
+                                <textarea name="additional_details" rows="4" placeholder="Any specific requirements, competitors, or questions?" className="w-full bg-[var(--bg-input)] border border-[var(--border)] rounded-xl px-4 py-3 text-[var(--text-main)] focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all outline-none resize-none placeholder-slate-500/50"></textarea>
                             </div>
 
-                            <button className="w-full py-5 rounded-2xl bg-[var(--accent-amber)] text-white font-bold text-lg hover:brightness-110 transition-all shadow-[0_4px_20px_rgba(251,191,36,0.3)] hover:shadow-[0_8px_30px_rgba(251,191,36,0.4)] transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3">
-                                <Rocket className="w-6 h-6" /> Launch Project
+                            <button
+                                type="submit"
+                                disabled={submitting || submitted}
+                                className={`w-full py-5 rounded-2xl font-bold text-lg transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3 ${submitted
+                                    ? 'bg-green-500 shadow-[0_4px_20px_rgba(34,197,94,0.3)]'
+                                    : 'bg-[var(--accent-amber)] shadow-[0_4px_20px_rgba(251,191,36,0.3)] hover:shadow-[0_8px_30px_rgba(251,191,36,0.4)] hover:brightness-110'
+                                    }`}
+                            >
+                                <Rocket className="w-6 h-6" />
+                                {submitting ? 'Sending...' : submitted ? 'Message Sent!' : 'Launch Project'}
                             </button>
 
                         </div>

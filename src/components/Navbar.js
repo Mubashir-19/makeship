@@ -1,82 +1,59 @@
-import React from 'react';
+// src/components/Navbar.js
+import React, { useState } from 'react';
 
-const Navbar = ({ sections, activeSection, scrollToSection }) => {
-    const mobileNavRef = React.useRef(null);
+const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    // Auto-center the active section in the mobile navbar
-    React.useEffect(() => {
-        if (mobileNavRef.current) {
-            const activeNode = mobileNavRef.current.children[activeSection];
-            if (activeNode) {
-                // Use scrollLeft to center manually if scrollIntoView is jittery, but scrollIntoView is usually fine
-                activeNode.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-            }
-        }
-    }, [activeSection]);
-
-    return (
-        <>
-            {/* Desktop Navbar (Sidebar) - Hidden on Mobile */}
-            <nav className="hidden md:flex fixed right-0 top-0 bottom-0 w-8 z-50 flex-col items-end justify-center pointer-events-none">
-                <div className="flex flex-col h-full w-full pointer-events-auto justify-center">
-                    {sections.map((section, index) => (
-                        <div
-                            key={section.id}
-                            onClick={() => scrollToSection(index)}
-                            className={`relative flex-1 max-h-32 group cursor-pointer transition-all duration-300 flex items-center justify-end pr-0 hover:pr-1 border-l-0
-                  ${activeSection === index ? 'w-3 opacity-100' : 'w-1.5 opacity-20 hover:opacity-50 hover:w-2.5'}
-                  ${section.color}
-                `}
-                        >
-                            {/* Tooltip Label */}
-                            <div className={`absolute right-4 px-3 py-1 rounded bg-[var(--bg-card-solid)] border border-[var(--border)] text-xs font-bold uppercase tracking-wider whitespace-nowrap transform transition-all duration-300 origin-right shadow-xl
-                  ${activeSection === index ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-4 scale-90 group-hover:opacity-100 group-hover:translate-x-0 group-hover:scale-100'}
-                  ${section.text}
-                `}>
-                                {section.label}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </nav>
-
-            {/* Mobile Navbar (Top "Circular" Scroll) - Hidden on Desktop */}
-            <nav className="md:hidden fixed top-0 left-0 right-0 z-50 pointer-events-auto">
-                <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[var(--bg-main)] to-transparent pointer-events-none" />
-
-                <div
-                    ref={mobileNavRef}
-                    className="relative flex overflow-x-auto snap-x snap-mandatory no-scrollbar py-6 px-[50vw] w-full items-center"
-                    style={{ scrollBehavior: 'smooth' }}
-                >
-                    {sections.map((section, index) => {
-                        const isActive = activeSection === index;
-                        return (
-                            <div
-                                key={section.id}
-                                onClick={() => scrollToSection(index)}
-                                className={`
-                                    snap-center shrink-0 mx-4 cursor-pointer transition-all duration-300 transform flex flex-col items-center justify-center
-                                    ${isActive ? 'scale-110 opacity-100' : 'scale-90 opacity-40'}
-                                `}
-                            >
-                                {/* Indicator Dot */}
-                                <div className={`mb-2 w-3 h-3 rounded-full shadow-lg ${section.color} ${isActive ? 'ring-4 ring-opacity-20 ' + section.color.replace('bg-', 'ring-') : ''}`} />
-
-                                {/* Text Label */}
-                                <span className={`
-                                    text-sm font-bold tracking-widest uppercase whitespace-nowrap px-3 py-1 rounded-full
-                                    ${isActive ? 'bg-[var(--bg-card-solid)] border border-[var(--border)] shadow-md text-[var(--text-main)]' : 'text-transparent'}
-                                `}>
-                                    {section.label}
-                                </span>
-                            </div>
-                        );
-                    })}
-                </div>
-            </nav>
-        </>
-    );
+  return (
+    <nav className="fixed w-full z-50 bg-background-dark/90 backdrop-blur-md border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          <div className="flex items-center">
+            <span className="text-2xl font-display font-bold text-white tracking-tight cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+              makeship<span className="text-primary">.dev</span>
+            </span>
+          </div>
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              <a href="#services" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+              <a href="#process" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Our Process</a>
+              <a href="#work" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Work</a>
+              <a href="#insights" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Insights</a>
+            </div>
+          </div>
+          <div className="hidden md:block">
+            <a 
+              href="#contact"
+              className="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all transform hover:scale-105 shadow-lg shadow-orange-500/30"
+            >
+              Get in Touch
+            </a>
+          </div>
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center">
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-gray-300 hover:text-white p-2"
+            >
+              <span className="material-icons-outlined">{mobileMenuOpen ? 'close' : 'menu'}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-background-dark border-b border-white/10 text-center">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+            <a href="#process" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Our Process</a>
+            <a href="#work" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Work</a>
+            <a href="#insights" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Insights</a>
+            <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-primary font-bold block px-3 py-2 rounded-md text-base">Get in Touch</a>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
 };
 
 export default Navbar;

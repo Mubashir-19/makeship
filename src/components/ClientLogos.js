@@ -1,79 +1,38 @@
+// src/components/ClientLogos.js
 import React from 'react';
 
-const logos = [
-    '/client_logos/eggsplain.png',
-    '/client_logos/f2t.png',
-    '/client_logos/hural.png',
-    '/client_logos/studiemattie.png',
-    '/client_logos/theimplantengine.png',
-];
+const ClientLogos = () => {
+  const clients = [
+    { name: 'Eggsplain', logo: '/client_logos/eggsplain.png' },
+    { name: 'F2T', logo: '/client_logos/f2t.png' },
+    { name: 'Hural', logo: '/client_logos/hural.png' },
+    { name: 'Studie Mattie', logo: '/client_logos/studiemattie.png' },
+    { name: 'The Implant Engine', logo: '/client_logos/theimplantengine.png' },
+  ];
 
-const ClientLogos = ({ isDarkMode }) => {
-    return (
-        <div className="w-full pt-4 pb-10 bg-[var(--bg-main)] overflow-hidden relative">
-            <style>{`
-            @keyframes marquee {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-33.333333%); }
-            }
-            .animate-marquee {
-                display: flex;
-                width: max-content;
-                animation: marquee 30s linear infinite;
-            }
-            .group:hover .animate-marquee {
-                animation-play-state: paused;
-            }
-        `}</style>
-
-            <div className="max-w-7xl mx-auto px-6 mb-6">
-                <p className="text-center text-[var(--text-muted)] text-sm font-semibold uppercase tracking-widest">
-                    Trusted By Leading Brands
-                </p>
-            </div>
-
-            <div className="relative w-full group">
-                {/* Gradient Masks for fade effect */}
-                <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-r from-[var(--bg-main)] to-transparent pointer-events-none" />
-                <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-[var(--bg-main)] to-transparent pointer-events-none" />
-
-                <div className="flex animate-marquee hover:cursor-pointer">
-                    {/* First set of logos */}
-                    {logos.map((logo, index) => (
-                        <div key={`logo-1-${index}`} className="flex items-center justify-center mx-8 md:mx-12 min-w-[120px]">
-                            <img
-                                src={logo}
-                                alt="Client Logo"
-                                className={`h-12 md:h-16 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ${!isDarkMode ? 'invert' : ''}`}
-                            />
-                        </div>
-                    ))}
-
-                    {/* Duplicate set for seamless loop */}
-                    {logos.map((logo, index) => (
-                        <div key={`logo-2-${index}`} className="flex items-center justify-center mx-8 md:mx-12 min-w-[120px]">
-                            <img
-                                src={logo}
-                                alt="Client Logo"
-                                className={`h-12 md:h-16 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ${!isDarkMode ? 'invert' : ''}`}
-                            />
-                        </div>
-                    ))}
-
-                    {/* Triplicate set for wider screens just in case */}
-                    {logos.map((logo, index) => (
-                        <div key={`logo-3-${index}`} className="flex items-center justify-center mx-8 md:mx-12 min-w-[120px]">
-                            <img
-                                src={logo}
-                                alt="Client Logo"
-                                className={`h-12 md:h-16 w-auto object-contain opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ${!isDarkMode ? 'invert' : ''}`}
-                            />
-                        </div>
-                    ))}
-                </div>
-            </div>
+  return (
+    <section className="py-16 bg-background-light dark:bg-background-dark">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl font-display font-semibold text-gray-900 dark:text-white">
+            Companies we have worked with
+          </h2>
         </div>
-    );
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 items-center">
+          {clients.map((client, i) => (
+            <div key={i} className="flex items-center justify-center rounded-xl bg-background-dark dark:bg-surface-dark border border-gray-200/20 p-6 grayscale hover:grayscale-0 transition-all duration-300">
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="h-12 md:h-14 w-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default ClientLogos;

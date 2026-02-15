@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Makeship.dev - Empowering Startups</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
-<script>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Makeship.dev - Empowering Startups</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -35,11 +39,13 @@
             },
         };
     </script>
-<style>.curve-divider-top {
+    <style>
+        .curve-divider-top {
             position: relative;
             height: 60px;
             overflow: hidden;
         }
+
         .curve-divider-top::after {
             content: '';
             position: absolute;
@@ -50,12 +56,15 @@
             height: 100%;
             border-radius: 50% 50% 0 0;
             background-color: inherit;
-        }.concave-divider {
+        }
+
+        .concave-divider {
             position: relative;
             height: 80px;
             background: transparent;
             overflow: hidden;
         }
+
         .concave-divider::before {
             content: "";
             position: absolute;
@@ -64,7 +73,9 @@
             height: 100%;
             background: radial-gradient(circle at 100% 0%, transparent 40px, currentColor 41px);
             left: 0;
-            color: inherit;}
+            color: inherit;
+        }
+
         .concave-divider::after {
             content: "";
             position: absolute;
@@ -77,483 +88,622 @@
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300">
-<nav class="fixed w-full z-50 bg-background-dark/90 backdrop-blur-md border-b border-white/10">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-20">
-<div class="flex items-center">
-<span class="text-2xl font-display font-bold text-white tracking-tight">makeship<span class="text-primary">.dev</span></span>
-</div>
-<div class="hidden md:block">
-<div class="ml-10 flex items-baseline space-x-8">
-<a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#">Services</a>
-<a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#">Our Process</a>
-<a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#">Work</a>
-<a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#">Insights</a>
-</div>
-</div>
-<div>
-<a class="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all transform hover:scale-105 shadow-lg shadow-orange-500/30" href="#">
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300">
+    <nav class="fixed w-full z-50 bg-background-dark/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <span class="text-2xl font-display font-bold text-white tracking-tight">makeship<span
+                            class="text-primary">.dev</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            href="#">Services</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            href="#">Our Process</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            href="#">Work</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            href="#">Insights</a>
+                    </div>
+                </div>
+                <div>
+                    <a class="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all transform hover:scale-105 shadow-lg shadow-orange-500/30"
+                        href="#">
                         Get in Touch
                     </a>
-</div>
-</div>
-</div>
-</nav>
-<header class="relative bg-background-dark text-white pt-32 pb-20 overflow-hidden">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-<div>
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-accent-gray mb-8">
-<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="relative bg-background-dark text-white pt-32 pb-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-accent-gray mb-8">
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                         PREMIUM PRODUCT DESIGN &amp; DEVELOPMENT AGENCY
                     </div>
-<h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-8">
-                        Empowering startups to launch, scale, and <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">succeed faster</span>
-</h1>
-<div class="flex flex-wrap gap-4 mb-16">
-<a class="bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg shadow-primary/25 flex items-center gap-2 group" href="#">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-8">
+                        Empowering startups to launch, scale, and <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">succeed
+                            faster</span>
+                    </h1>
+                    <div class="flex flex-wrap gap-4 mb-16">
+                        <a class="bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg shadow-primary/25 flex items-center gap-2 group"
+                            href="#">
                             Our Work
-                            <span class="material-icons-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-<a class="bg-transparent border border-white/20 hover:border-white text-white px-8 py-4 rounded-full font-semibold transition-all hover:bg-white/5" href="#">
+                            <span
+                                class="material-icons-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                        <a class="bg-transparent border border-white/20 hover:border-white text-white px-8 py-4 rounded-full font-semibold transition-all hover:bg-white/5"
+                            href="#">
                             View Process
                         </a>
-</div>
-</div>
-<div class="lg:mt-12 space-y-16">
-<p class="text-xl text-gray-400 font-light leading-relaxed border-l-2 border-primary/50 pl-6">
-                        From MVP to market domination — your reliable partner in UI/UX design and development. We build digital products that users love and investors back.
+                    </div>
+                </div>
+                <div class="lg:mt-12 space-y-16">
+                    <p class="text-xl text-gray-400 font-light leading-relaxed border-l-2 border-primary/50 pl-6">
+                        From MVP to market domination — your reliable partner in UI/UX design and development. We build
+                        digital products that users love and investors back.
                     </p>
-<div class="space-y-4">
-<p class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Supported by VC firms from around the world</p>
-<div class="flex gap-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-<div class="h-8 w-24 bg-white/10 rounded animate-pulse"></div> 
-<div class="h-8 w-24 bg-white/10 rounded animate-pulse"></div> 
-<div class="h-8 w-24 bg-white/10 rounded animate-pulse"></div> 
-</div>
-</div>
-<div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
-<div>
-<div class="text-4xl font-display font-bold text-white mb-1">98%</div>
-<div class="text-sm text-gray-500">Customer satisfaction rate</div>
-</div>
-<div>
-<div class="text-4xl font-display font-bold text-white mb-1">35%+</div>
-<div class="text-sm text-gray-500">Faster development time</div>
-</div>
-<div>
-<div class="text-4xl font-display font-bold text-white mb-1">70+</div>
-<div class="text-sm text-gray-500">Startups launched</div>
-</div>
-<div>
-<div class="text-4xl font-display font-bold text-white mb-1">500M+</div>
-<div class="text-sm text-gray-500">Funding raised by clients</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="absolute bottom-0 left-0 w-full text-background-light dark:text-background-dark">
-<svg class="w-full h-16 sm:h-24 fill-current" preserveAspectRatio="none" viewBox="0 0 1440 74" xmlns="http://www.w3.org/2000/svg">
-<path d="M456.464 0.0433865C277.158 -1.70575 0 50.0141 0 50.0141V74H1440V50.0141C1440 50.0141 1320.4 31.1925 1243.09 27.0276C1099.33 19.2816 1019.08 53.1981 875.138 50.0141C710.527 46.3727 621.108 1.64949 456.464 0.0433865Z"></path>
-</svg>
-</div>
-</header>
-<section class="py-24 bg-background-light dark:bg-background-dark">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-left mb-16">
-<span class="text-sm font-semibold text-primary tracking-wide uppercase">Product Design and Development Agency</span>
-<h2 class="text-4xl md:text-5xl font-display font-bold text-text-light dark:text-text-dark mt-2">
+                    <div class="space-y-4">
+                        <p class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Supported by VC firms
+                            from around the world</p>
+                        <div class="flex gap-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                            <div class="h-8 w-24 bg-white/10 rounded animate-pulse"></div>
+                            <div class="h-8 w-24 bg-white/10 rounded animate-pulse"></div>
+                            <div class="h-8 w-24 bg-white/10 rounded animate-pulse"></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
+                        <div>
+                            <div class="text-4xl font-display font-bold text-white mb-1">98%</div>
+                            <div class="text-sm text-gray-500">Customer satisfaction rate</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-display font-bold text-white mb-1">35%+</div>
+                            <div class="text-sm text-gray-500">Faster development time</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-display font-bold text-white mb-1">70+</div>
+                            <div class="text-sm text-gray-500">Startups launched</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-display font-bold text-white mb-1">500M+</div>
+                            <div class="text-sm text-gray-500">Funding raised by clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full text-background-light dark:text-background-dark">
+            <svg class="w-full h-16 sm:h-24 fill-current" preserveAspectRatio="none" viewBox="0 0 1440 74"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M456.464 0.0433865C277.158 -1.70575 0 50.0141 0 50.0141V74H1440V50.0141C1440 50.0141 1320.4 31.1925 1243.09 27.0276C1099.33 19.2816 1019.08 53.1981 875.138 50.0141C710.527 46.3727 621.108 1.64949 456.464 0.0433865Z">
+                </path>
+            </svg>
+        </div>
+    </header>
+    <section class="py-24 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-left mb-16">
+                <span class="text-sm font-semibold text-primary tracking-wide uppercase">Product Design and Development
+                    Agency</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-text-light dark:text-text-dark mt-2">
                     Our featured client wins
                 </h2>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-gray-200 dark:bg-gray-800 border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden">
-<div class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
-<span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
-<span class="material-icons-outlined text-primary">cloud_circle</span> skypark
+            </div>
+            <div
+                class="grid grid-cols-2 md:grid-cols-4 gap-px bg-gray-200 dark:bg-gray-800 border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden">
+                <div
+                    class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
+                    <span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
+                        <span class="material-icons-outlined text-primary">cloud_circle</span> skypark
                     </span>
-</div>
-<div class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
-<span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
-<span class="material-icons-outlined text-blue-500">waves</span> intake
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
+                    <span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
+                        <span class="material-icons-outlined text-blue-500">waves</span> intake
                     </span>
-</div>
-<div class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
-<span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
-<span class="material-icons-outlined text-green-500">grid_view</span> OneText
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
+                    <span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
+                        <span class="material-icons-outlined text-green-500">grid_view</span> OneText
                     </span>
-</div>
-<div class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
-<span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
-<span class="material-icons-outlined text-purple-500">token</span> QYRON
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
+                    <span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
+                        <span class="material-icons-outlined text-purple-500">token</span> QYRON
                     </span>
-</div>
-<div class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
-<span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
-<span class="material-icons-outlined text-red-500">bolt</span> quickprint
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
+                    <span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
+                        <span class="material-icons-outlined text-red-500">bolt</span> quickprint
                     </span>
-</div>
-<div class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
-<span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
-<span class="material-icons-outlined text-indigo-500">layers</span> layer360
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
+                    <span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
+                        <span class="material-icons-outlined text-indigo-500">layers</span> layer360
                     </span>
-</div>
-<div class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
-<span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
-<span class="material-icons-outlined text-yellow-500">view_in_ar</span> Modus
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
+                    <span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
+                        <span class="material-icons-outlined text-yellow-500">view_in_ar</span> Modus
                     </span>
-</div>
-<div class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
-<span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
-<span class="material-icons-outlined text-pink-500">diamond</span> SUFFIX
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark p-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all group">
+                    <span class="text-xl font-bold font-display text-gray-800 dark:text-white flex items-center gap-2">
+                        <span class="material-icons-outlined text-pink-500">diamond</span> SUFFIX
                     </span>
-</div>
-</div>
-</div>
-</section>
-<section class="py-20 bg-background-light dark:bg-background-dark overflow-hidden">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div>
-<span class="text-sm font-semibold text-primary tracking-wide uppercase mb-4 block">Product Design and Development Agency</span>
-<h2 class="text-4xl lg:text-5xl font-display font-bold text-text-light dark:text-text-dark leading-tight mb-12">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-background-light dark:bg-background-dark overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-sm font-semibold text-primary tracking-wide uppercase mb-4 block">Product Design
+                        and Development Agency</span>
+                    <h2
+                        class="text-4xl lg:text-5xl font-display font-bold text-text-light dark:text-text-dark leading-tight mb-12">
                         Building a startup is hard, but finding the right partner shouldn't be
                     </h2>
-<div class="flex flex-col gap-8 relative pl-8 border-l border-gray-200 dark:border-gray-800">
-<div class="relative">
-<h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-2">How do they tell what to launch as MVP specs?</h3>
-<p class="text-gray-600 dark:text-gray-400">Our discovery process helps you focus on what matters most, and with pre-built development frameworks, we can speed up your MVP development by 50%. With our design agency, you can launch faster without sacrificing quality.</p>
-</div>
-<a class="inline-flex items-center text-primary font-semibold hover:text-orange-600 transition-colors" href="#">
+                    <div class="flex flex-col gap-8 relative pl-8 border-l border-gray-200 dark:border-gray-800">
+                        <div class="relative">
+                            <h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-2">How do they tell what
+                                to launch as MVP specs?</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Our discovery process helps you focus on what
+                                matters most, and with pre-built development frameworks, we can speed up your MVP
+                                development by 50%. With our design agency, you can launch faster without sacrificing
+                                quality.</p>
+                        </div>
+                        <a class="inline-flex items-center text-primary font-semibold hover:text-orange-600 transition-colors"
+                            href="#">
                             Contact Us Now <span class="material-icons-outlined text-sm ml-1">arrow_forward</span>
-</a>
-</div>
-</div>
-<div class="relative">
-<div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative">
-<img alt="Professional woman in business attire looking confident" class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwnsAPcIuLm2_qm6Fxw95ES0yp6UZT_f1jqeT9dZf7au9LQGBViViP6f6LqdkoeFNFr3mpVuYO_UlU0TpJIKk-x6HhnGUMgjpfhdk4Bp3nUKrmg4hdF33K7cEuVNlvm9GC873TuC6ay0uXTenk7F94vjxrYG7JSxEr25eQVU40S8LAos_WzxRnkIyPbogcp7k412d3CffdI93VDXW1hX5LTRUheyvF7aKtrE3yjugSoAiBzmN1uEmQr8q1PkY9SJSx_VSH_Fwatw"/>
-<div class="absolute bottom-6 right-6 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-lg text-white text-sm font-medium">
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative">
+                        <img alt="Professional woman in business attire looking confident"
+                            class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwnsAPcIuLm2_qm6Fxw95ES0yp6UZT_f1jqeT9dZf7au9LQGBViViP6f6LqdkoeFNFr3mpVuYO_UlU0TpJIKk-x6HhnGUMgjpfhdk4Bp3nUKrmg4hdF33K7cEuVNlvm9GC873TuC6ay0uXTenk7F94vjxrYG7JSxEr25eQVU40S8LAos_WzxRnkIyPbogcp7k412d3CffdI93VDXW1hX5LTRUheyvF7aKtrE3yjugSoAiBzmN1uEmQr8q1PkY9SJSx_VSH_Fwatw" />
+                        <div
+                            class="absolute bottom-6 right-6 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-lg text-white text-sm font-medium">
                             Trusted Partner
                         </div>
-</div>
-<div class="absolute -z-10 top-10 -right-10 w-full h-full border-2 border-primary/20 rounded-2xl"></div>
-</div>
-</div>
-</div>
-</section>
-<div class="relative h-24 bg-background-light dark:bg-background-dark overflow-hidden z-20">
-<div class="absolute inset-0 flex items-end text-background-dark dark:text-black">
-<svg class="w-full h-full fill-current" preserveAspectRatio="none" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
-<path d="M0,80 L0,20 C200,20 200,80 400,80 C600,80 600,20 800,20 C1000,20 1000,80 1200,80 C1300,80 1440,20 1440,20 L1440,80 Z" transform="scale(1, -1) translate(0, -100)"></path>
-<path d="M0 80V0C0 0 357.5 70 720 70C1082.5 70 1440 0 1440 0V80H0Z"></path>
-</svg>
-</div>
-</div>
-<section class="bg-background-dark dark:bg-black text-white py-24 relative">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="mb-20 max-w-3xl">
-<span class="text-sm font-semibold text-primary tracking-wide uppercase mb-4 block">Product Design and Development Agency</span>
-<h2 class="text-4xl md:text-5xl font-display font-bold leading-tight">
+                    </div>
+                    <div class="absolute -z-10 top-10 -right-10 w-full h-full border-2 border-primary/20 rounded-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="relative h-24 bg-background-light dark:bg-background-dark overflow-hidden z-20">
+        <div class="absolute inset-0 flex items-end text-background-dark dark:text-black">
+            <svg class="w-full h-full fill-current" preserveAspectRatio="none" viewBox="0 0 1440 80"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0,80 L0,20 C200,20 200,80 400,80 C600,80 600,20 800,20 C1000,20 1000,80 1200,80 C1300,80 1440,20 1440,20 L1440,80 Z"
+                    transform="scale(1, -1) translate(0, -100)"></path>
+                <path d="M0 80V0C0 0 357.5 70 720 70C1082.5 70 1440 0 1440 0V80H0Z"></path>
+            </svg>
+        </div>
+    </div>
+    <section class="bg-background-dark dark:bg-black text-white py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-20 max-w-3xl">
+                <span class="text-sm font-semibold text-primary tracking-wide uppercase mb-4 block">Product Design and
+                    Development Agency</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold leading-tight">
                     Tailored support from first prototype to long-term scale
                 </h2>
-<p class="mt-6 text-gray-400 text-lg max-w-2xl">
-                    Great products don't happen by accident. Our digital product design agency drives change and through smart strategy, solid UX, and scalable development from day one.
+                <p class="mt-6 text-gray-400 text-lg max-w-2xl">
+                    Great products don't happen by accident. Our digital product design agency drives change and through
+                    smart strategy, solid UX, and scalable development from day one.
                 </p>
-</div>
-<div class="space-y-24 relative">
-<div class="absolute left-0 top-4 bottom-4 w-px bg-white/10 hidden md:block"></div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8 relative">
-<div class="md:col-span-3">
-<div class="hidden md:flex absolute -left-[5px] top-2 w-2.5 h-2.5 bg-primary rounded-full z-10"></div>
-<div class="text-xs font-mono text-gray-500 mb-1">PHASE 01</div>
-<h3 class="text-xl font-bold text-white">Validate your idea &amp; attract early investors</h3>
-</div>
-<div class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group">
-<h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">Design prototypes</h4>
-<p class="text-sm text-gray-400 leading-relaxed">High fidelity clickable prototypes that feel like the real thing to pitch to investors.</p>
-</div>
-<div class="group">
-<h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">Product discovery</h4>
-<p class="text-sm text-gray-400 leading-relaxed">Map out features, users, and flows with workshops to minimize risk and reduce cost.</p>
-</div>
-<div class="group">
-<h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">Website development</h4>
-<p class="text-sm text-gray-400 leading-relaxed">Custom, high-converting marketing sites that communicate your value.</p>
-</div>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8 relative">
-<div class="md:col-span-3">
-<div class="hidden md:flex absolute -left-[5px] top-2 w-2.5 h-2.5 bg-gray-700 rounded-full z-10"></div>
-<div class="text-xs font-mono text-gray-500 mb-1">PHASE 02</div>
-<h3 class="text-xl font-bold text-white">Build your product &amp; gain market traction</h3>
-<a class="inline-block mt-6 bg-primary hover:bg-orange-600 text-white text-xs font-bold px-4 py-2 rounded uppercase tracking-wider transition-colors" href="#">
+            </div>
+            <div class="space-y-24 relative">
+                <div class="absolute left-0 top-4 bottom-4 w-px bg-white/10 hidden md:block"></div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 relative">
+                    <div class="md:col-span-3">
+                        <div class="hidden md:flex absolute -left-[5px] top-2 w-2.5 h-2.5 bg-primary rounded-full z-10">
+                        </div>
+                        <div class="text-xs font-mono text-gray-500 mb-1">PHASE 01</div>
+                        <h3 class="text-xl font-bold text-white">Validate your idea &amp; attract early investors</h3>
+                    </div>
+                    <div class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="group">
+                            <h4
+                                class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                                Design prototypes</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">High fidelity clickable prototypes that
+                                feel like the real thing to pitch to investors.</p>
+                        </div>
+                        <div class="group">
+                            <h4
+                                class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                                Product discovery</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Map out features, users, and flows with
+                                workshops to minimize risk and reduce cost.</p>
+                        </div>
+                        <div class="group">
+                            <h4
+                                class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                                Website development</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Custom, high-converting marketing sites
+                                that communicate your value.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 relative">
+                    <div class="md:col-span-3">
+                        <div
+                            class="hidden md:flex absolute -left-[5px] top-2 w-2.5 h-2.5 bg-gray-700 rounded-full z-10">
+                        </div>
+                        <div class="text-xs font-mono text-gray-500 mb-1">PHASE 02</div>
+                        <h3 class="text-xl font-bold text-white">Build your product &amp; gain market traction</h3>
+                        <a class="inline-block mt-6 bg-primary hover:bg-orange-600 text-white text-xs font-bold px-4 py-2 rounded uppercase tracking-wider transition-colors"
+                            href="#">
                             Contact Us
                         </a>
-</div>
-<div class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group">
-<h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">Branding</h4>
-<p class="text-sm text-gray-400 leading-relaxed">Strategic visual identity to resonate with your audience and manage risk.</p>
-</div>
-<div class="group">
-<h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">Technical workshop</h4>
-<p class="text-sm text-gray-400 leading-relaxed">Architect your tech stack, database and APIs for future scale.</p>
-</div>
-<div class="group">
-<h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">Custom app development</h4>
-<p class="text-sm text-gray-400 leading-relaxed">Full-stack development using the frameworks, optimized for performance.</p>
-</div>
-<div class="group">
-<h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">Rapid mvp development</h4>
-<p class="text-sm text-gray-400 leading-relaxed">Get your MVP to market fast with our pre-built robust frameworks.</p>
-</div>
-<div class="group">
-<h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">Code audit team</h4>
-<p class="text-sm text-gray-400 leading-relaxed">Analyze existing codebases to spot issues and fix them.</p>
-</div>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8 relative">
-<div class="md:col-span-3">
-<div class="hidden md:flex absolute -left-[5px] top-2 w-2.5 h-2.5 bg-gray-700 rounded-full z-10"></div>
-<div class="text-xs font-mono text-gray-500 mb-1">PHASE 03</div>
-<h3 class="text-xl font-bold text-white">Scale, optimize &amp; reach more users</h3>
-</div>
-<div class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group">
-<h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">UX audit</h4>
-<p class="text-sm text-gray-400 leading-relaxed">Identify friction points and improve conversion rates with data driven insights.</p>
-</div>
-<div class="group">
-<h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">Product redesign</h4>
-<p class="text-sm text-gray-400 leading-relaxed">Refresh legacy products with modern interfaces that users love and want to tell their friends about.</p>
-</div>
-<div class="group">
-<h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">Team extension</h4>
-<p class="text-sm text-gray-400 leading-relaxed">Provide dedicated senior developers and designers to augment your team.</p>
-</div>
-<div class="group">
-<h4 class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">Website redesign</h4>
-<p class="text-sm text-gray-400 leading-relaxed">Modernize your web presence with a design system ready for content updates.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<div class="relative h-24 bg-background-light dark:bg-background-dark overflow-hidden -mt-1 z-20">
-<div class="absolute inset-0 flex items-start text-background-dark dark:text-black">
-<svg class="w-full h-full fill-current" preserveAspectRatio="none" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0V80C0 80 357.5 10 720 10C1082.5 10 1440 80 1440 80V0H0Z"></path>
-</svg>
-</div>
-</div>
-<section class="py-24 bg-background-light dark:bg-background-dark" id="projects">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="max-w-3xl mb-16">
-<span class="text-sm font-semibold text-primary tracking-wide uppercase mb-4 block">Our Work</span>
-<h2 class="text-4xl md:text-5xl font-display font-bold text-text-light dark:text-text-dark leading-tight">
-                    Discover how we're driving change through innovative projects, strong partnerships, and measurable outcomes
+                    </div>
+                    <div class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="group">
+                            <h4
+                                class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                                Branding</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Strategic visual identity to resonate with
+                                your audience and manage risk.</p>
+                        </div>
+                        <div class="group">
+                            <h4
+                                class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                                Technical workshop</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Architect your tech stack, database and
+                                APIs for future scale.</p>
+                        </div>
+                        <div class="group">
+                            <h4
+                                class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                                Custom app development</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Full-stack development using the
+                                frameworks, optimized for performance.</p>
+                        </div>
+                        <div class="group">
+                            <h4
+                                class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                                Rapid mvp development</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Get your MVP to market fast with our
+                                pre-built robust frameworks.</p>
+                        </div>
+                        <div class="group">
+                            <h4
+                                class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                                Code audit team</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Analyze existing codebases to spot issues
+                                and fix them.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 relative">
+                    <div class="md:col-span-3">
+                        <div
+                            class="hidden md:flex absolute -left-[5px] top-2 w-2.5 h-2.5 bg-gray-700 rounded-full z-10">
+                        </div>
+                        <div class="text-xs font-mono text-gray-500 mb-1">PHASE 03</div>
+                        <h3 class="text-xl font-bold text-white">Scale, optimize &amp; reach more users</h3>
+                    </div>
+                    <div class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="group">
+                            <h4
+                                class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                                UX audit</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Identify friction points and improve
+                                conversion rates with data driven insights.</p>
+                        </div>
+                        <div class="group">
+                            <h4
+                                class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                                Product redesign</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Refresh legacy products with modern
+                                interfaces that users love and want to tell their friends about.</p>
+                        </div>
+                        <div class="group">
+                            <h4
+                                class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                                Team extension</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Provide dedicated senior developers and
+                                designers to augment your team.</p>
+                        </div>
+                        <div class="group">
+                            <h4
+                                class="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
+                                Website redesign</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">Modernize your web presence with a design
+                                system ready for content updates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="relative h-24 bg-background-light dark:bg-background-dark overflow-hidden -mt-1 z-20">
+        <div class="absolute inset-0 flex items-start text-background-dark dark:text-black">
+            <svg class="w-full h-full fill-current" preserveAspectRatio="none" viewBox="0 0 1440 80"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0V80C0 80 357.5 10 720 10C1082.5 10 1440 80 1440 80V0H0Z"></path>
+            </svg>
+        </div>
+    </div>
+    <section class="py-24 bg-background-light dark:bg-background-dark" id="projects">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-16">
+                <span class="text-sm font-semibold text-primary tracking-wide uppercase mb-4 block">Our Work</span>
+                <h2
+                    class="text-4xl md:text-5xl font-display font-bold text-text-light dark:text-text-dark leading-tight">
+                    Discover how we're driving change through innovative projects, strong partnerships, and measurable
+                    outcomes
                 </h2>
-</div>
-<div class="flex flex-wrap gap-4 mb-12" role="tablist">
-<button class="px-6 py-2 rounded-full bg-black text-white dark:bg-white dark:text-black font-medium text-sm transition-transform hover:scale-105">AI Systems</button>
-<button class="px-6 py-2 rounded-full bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium text-sm transition-transform hover:scale-105">Fintech</button>
-<button class="px-6 py-2 rounded-full bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium text-sm transition-transform hover:scale-105">Mobile Apps</button>
-<button class="px-6 py-2 rounded-full bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium text-sm transition-transform hover:scale-105">SaaS</button>
-</div>
-<div class="bg-white dark:bg-surface-dark rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-800 transition-all hover:shadow-2xl group">
-<div class="grid grid-cols-1 lg:grid-cols-2">
-<div class="bg-blue-50 dark:bg-blue-900/10 p-12 flex items-center justify-center relative overflow-hidden">
-<div class="relative z-10 w-full shadow-2xl rounded-lg overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-500">
-<img alt="Dashboard interface showing analytics and charts for governance platform" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJSiV5uD_QvYDU3uG09391g531vz2emArzh4szht4BjvlzUKdE7slw2FX714NbqRBMR6D10sQZuXvB9n8yHFo6a35NMEoam8acb3Vv2FgFJWp5jqiI1xMJGiF39eVIkYFNxOqVcjug56tTRis2CbjqjSf1dIpuNxybaFl5xytP4bAyU7CLaHpkd4t-Ossa1bvlGAgm0VDe_AYdoffwOXCP7bWbY4WeMHry-pv85m3zPrTYaYrCpTmE0_bUq16R5UiH64a5Iu6qDg"/>
-</div>
-<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
-<div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -ml-16 -mb-16"></div>
-</div>
-<div class="p-10 lg:p-16 flex flex-col justify-center">
-<div class="mb-2 text-xs font-bold text-gray-400 uppercase tracking-widest">Web App Product Design &amp; Development</div>
-<h3 class="text-3xl font-display font-bold text-text-light dark:text-text-dark mb-4">
+            </div>
+            <div class="flex flex-wrap gap-4 mb-12" role="tablist">
+                <button
+                    class="px-6 py-2 rounded-full bg-black text-white dark:bg-white dark:text-black font-medium text-sm transition-transform hover:scale-105">AI
+                    Systems</button>
+                <button
+                    class="px-6 py-2 rounded-full bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium text-sm transition-transform hover:scale-105">Fintech</button>
+                <button
+                    class="px-6 py-2 rounded-full bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium text-sm transition-transform hover:scale-105">Mobile
+                    Apps</button>
+                <button
+                    class="px-6 py-2 rounded-full bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium text-sm transition-transform hover:scale-105">SaaS</button>
+            </div>
+            <div
+                class="bg-white dark:bg-surface-dark rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-800 transition-all hover:shadow-2xl group">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div
+                        class="bg-blue-50 dark:bg-blue-900/10 p-12 flex items-center justify-center relative overflow-hidden">
+                        <div
+                            class="relative z-10 w-full shadow-2xl rounded-lg overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-500">
+                            <img alt="Dashboard interface showing analytics and charts for governance platform"
+                                class="w-full h-auto object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJSiV5uD_QvYDU3uG09391g531vz2emArzh4szht4BjvlzUKdE7slw2FX714NbqRBMR6D10sQZuXvB9n8yHFo6a35NMEoam8acb3Vv2FgFJWp5jqiI1xMJGiF39eVIkYFNxOqVcjug56tTRis2CbjqjSf1dIpuNxybaFl5xytP4bAyU7CLaHpkd4t-Ossa1bvlGAgm0VDe_AYdoffwOXCP7bWbY4WeMHry-pv85m3zPrTYaYrCpTmE0_bUq16R5UiH64a5Iu6qDg" />
+                        </div>
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -ml-16 -mb-16">
+                        </div>
+                    </div>
+                    <div class="p-10 lg:p-16 flex flex-col justify-center">
+                        <div class="mb-2 text-xs font-bold text-gray-400 uppercase tracking-widest">Web App Product
+                            Design &amp; Development</div>
+                        <h3 class="text-3xl font-display font-bold text-text-light dark:text-text-dark mb-4">
                             Isora – optimizing governance, risk &amp; compliance for top institutions
                         </h3>
-<div class="flex gap-2 mb-8">
-<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300">
+                        <div class="flex gap-2 mb-8">
+                            <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300">
                                 FinTech
                             </span>
-<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300">
+                            <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300">
                                 B2B SaaS
                             </span>
-</div>
-<div class="grid grid-cols-2 gap-8 mb-8">
-<div>
-<div class="text-xs text-gray-500 uppercase tracking-wide mb-1">Time Frame</div>
-<div class="font-medium text-text-light dark:text-text-dark">8 weeks: MVP</div>
-</div>
-<div>
-<div class="text-xs text-gray-500 uppercase tracking-wide mb-1">Team Size</div>
-<div class="font-medium text-text-light dark:text-text-dark">4 members</div>
-</div>
-</div>
-<div class="space-y-4 mb-10">
-<h4 class="text-sm font-bold text-text-light dark:text-text-dark uppercase">Results</h4>
-<ul class="space-y-3">
-<li class="flex items-start text-sm text-gray-600 dark:text-gray-400">
-<span class="material-icons-outlined text-green-500 text-base mr-2 mt-0.5">check_circle</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-8 mb-8">
+                            <div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wide mb-1">Time Frame</div>
+                                <div class="font-medium text-text-light dark:text-text-dark">8 weeks: MVP</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wide mb-1">Team Size</div>
+                                <div class="font-medium text-text-light dark:text-text-dark">4 members</div>
+                            </div>
+                        </div>
+                        <div class="space-y-4 mb-10">
+                            <h4 class="text-sm font-bold text-text-light dark:text-text-dark uppercase">Results</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start text-sm text-gray-600 dark:text-gray-400">
+                                    <span
+                                        class="material-icons-outlined text-green-500 text-base mr-2 mt-0.5">check_circle</span>
                                     2x faster user workflows
                                 </li>
-<li class="flex items-start text-sm text-gray-600 dark:text-gray-400">
-<span class="material-icons-outlined text-green-500 text-base mr-2 mt-0.5">check_circle</span>
+                                <li class="flex items-start text-sm text-gray-600 dark:text-gray-400">
+                                    <span
+                                        class="material-icons-outlined text-green-500 text-base mr-2 mt-0.5">check_circle</span>
                                     50% shorter time-to-market
                                 </li>
-<li class="flex items-start text-sm text-gray-600 dark:text-gray-400">
-<span class="material-icons-outlined text-green-500 text-base mr-2 mt-0.5">check_circle</span>
+                                <li class="flex items-start text-sm text-gray-600 dark:text-gray-400">
+                                    <span
+                                        class="material-icons-outlined text-green-500 text-base mr-2 mt-0.5">check_circle</span>
                                     Nominated for UX Design Award 2023
                                 </li>
-</ul>
-</div>
-<a class="inline-flex items-center justify-center w-40 bg-primary hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-colors shadow-lg shadow-orange-500/20" href="#">
+                            </ul>
+                        </div>
+                        <a class="inline-flex items-center justify-center w-40 bg-primary hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-colors shadow-lg shadow-orange-500/20"
+                            href="#">
                             View Case Study
                         </a>
-</div>
-</div>
-</div>
-<div class="mt-12 text-center">
-<a class="text-gray-500 hover:text-primary font-medium inline-flex items-center gap-2 transition-colors" href="#">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a class="text-gray-500 hover:text-primary font-medium inline-flex items-center gap-2 transition-colors"
+                    href="#">
                     View all cases <span class="material-icons-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-<section class="py-24 bg-gray-50 dark:bg-[#0f1115]">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="mb-16">
-<span class="text-sm font-semibold text-primary tracking-wide uppercase mb-4 block">Key Innovations</span>
-<h2 class="text-4xl md:text-5xl font-display font-bold text-text-light dark:text-text-dark">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-gray-50 dark:bg-[#0f1115]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <span class="text-sm font-semibold text-primary tracking-wide uppercase mb-4 block">Key
+                    Innovations</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-text-light dark:text-text-dark">
                     Our areas of expertise
                 </h2>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-<div class="lg:col-span-3 space-y-2">
-<button class="w-full text-left px-4 py-3 rounded-lg bg-black text-white dark:bg-white dark:text-black font-semibold text-sm flex justify-between items-center shadow-lg">
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-3 space-y-2">
+                    <button
+                        class="w-full text-left px-4 py-3 rounded-lg bg-black text-white dark:bg-white dark:text-black font-semibold text-sm flex justify-between items-center shadow-lg">
                         SaaS
                         <span class="material-icons-outlined text-sm">chevron_right</span>
-</button>
-<button class="w-full text-left px-4 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium text-sm transition-colors">
+                    </button>
+                    <button
+                        class="w-full text-left px-4 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium text-sm transition-colors">
                         Market Network
                     </button>
-<button class="w-full text-left px-4 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium text-sm transition-colors">
+                    <button
+                        class="w-full text-left px-4 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium text-sm transition-colors">
                         E-commerce
                     </button>
-<button class="w-full text-left px-4 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium text-sm transition-colors">
+                    <button
+                        class="w-full text-left px-4 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium text-sm transition-colors">
                         Healthcare
                     </button>
-</div>
-<div class="lg:col-span-9 bg-white dark:bg-surface-dark rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800">
-<h3 class="text-2xl font-display font-bold text-text-light dark:text-text-dark mb-6">Scalable platforms for growth-focused teams</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-<div>
-<h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Highlights</h4>
-<ul class="space-y-4">
-<li class="flex items-start">
-<div class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary mr-3"></div>
-<p class="text-sm text-gray-600 dark:text-gray-300">High churn from poor user experience/UX</p>
-</li>
-<li class="flex items-start">
-<div class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary mr-3"></div>
-<p class="text-sm text-gray-600 dark:text-gray-300">Scaling product features without complicating the stack</p>
-</li>
-<li class="flex items-start">
-<div class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary mr-3"></div>
-<p class="text-sm text-gray-600 dark:text-gray-300">Low performance from users with massive data tables</p>
-</li>
-</ul>
-<a class="inline-block mt-8 bg-primary hover:bg-orange-600 text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition-colors" href="#">
+                </div>
+                <div
+                    class="lg:col-span-9 bg-white dark:bg-surface-dark rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800">
+                    <h3 class="text-2xl font-display font-bold text-text-light dark:text-text-dark mb-6">Scalable
+                        platforms for growth-focused teams</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div>
+                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Highlights</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary mr-3"></div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">High churn from poor user
+                                        experience/UX</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary mr-3"></div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Scaling product features without
+                                        complicating the stack</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary mr-3"></div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Low performance from users with
+                                        massive data tables</p>
+                                </li>
+                            </ul>
+                            <a class="inline-block mt-8 bg-primary hover:bg-orange-600 text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition-colors"
+                                href="#">
                                 Explore SaaS
                             </a>
-</div>
-<div>
-<h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Our Solutions</h4>
-<ul class="space-y-4">
-<li class="flex items-start">
-<span class="material-icons-outlined text-green-500 text-sm mr-2 mt-0.5">check</span>
-<p class="text-sm text-gray-600 dark:text-gray-300">Design First: Focus on intuitive user flows and dashboards</p>
-</li>
-<li class="flex items-start">
-<span class="material-icons-outlined text-green-500 text-sm mr-2 mt-0.5">check</span>
-<p class="text-sm text-gray-600 dark:text-gray-300">Modular backend architecture for sustainable scale</p>
-</li>
-<li class="flex items-start">
-<span class="material-icons-outlined text-green-500 text-sm mr-2 mt-0.5">check</span>
-<p class="text-sm text-gray-600 dark:text-gray-300">High-performance data management for real-time interactions</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<footer class="bg-background-dark text-white pt-24 pb-12 border-t border-white/10 relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full -mt-1 text-gray-50 dark:text-[#0f1115]">
-<svg class="w-full h-12 md:h-20 fill-current transform rotate-180" preserveAspectRatio="none" viewBox="0 0 1440 74" xmlns="http://www.w3.org/2000/svg">
-<path d="M456.464 0.0433865C277.158 -1.70575 0 50.0141 0 50.0141V74H1440V50.0141C1440 50.0141 1320.4 31.1925 1243.09 27.0276C1099.33 19.2816 1019.08 53.1981 875.138 50.0141C710.527 46.3727 621.108 1.64949 456.464 0.0433865Z"></path>
-</svg>
-</div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-10">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-<div>
-<span class="text-2xl font-display font-bold text-white tracking-tight mb-6 block">makeship<span class="text-primary">.dev</span></span>
-<p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Our Solutions
+                            </h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <span
+                                        class="material-icons-outlined text-green-500 text-sm mr-2 mt-0.5">check</span>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Design First: Focus on intuitive
+                                        user flows and dashboards</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <span
+                                        class="material-icons-outlined text-green-500 text-sm mr-2 mt-0.5">check</span>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Modular backend architecture for
+                                        sustainable scale</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <span
+                                        class="material-icons-outlined text-green-500 text-sm mr-2 mt-0.5">check</span>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">High-performance data management
+                                        for real-time interactions</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-background-dark text-white pt-24 pb-12 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full -mt-1 text-gray-50 dark:text-[#0f1115]">
+            <svg class="w-full h-12 md:h-20 fill-current transform rotate-180" preserveAspectRatio="none"
+                viewBox="0 0 1440 74" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M456.464 0.0433865C277.158 -1.70575 0 50.0141 0 50.0141V74H1440V50.0141C1440 50.0141 1320.4 31.1925 1243.09 27.0276C1099.33 19.2816 1019.08 53.1981 875.138 50.0141C710.527 46.3727 621.108 1.64949 456.464 0.0433865Z">
+                </path>
+            </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <span class="text-2xl font-display font-bold text-white tracking-tight mb-6 block">makeship<span
+                            class="text-primary">.dev</span></span>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
                         We partner with ambitious startups to design, build, and scale world-class digital products.
                     </p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" href="#">
-<span class="material-icons-outlined text-sm">alternate_email</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" href="#">
-<span class="material-icons-outlined text-sm">share</span>
-</a>
-</div>
-</div>
-<div>
-<h4 class="text-lg font-bold mb-6">Services</h4>
-<ul class="space-y-3 text-sm text-gray-400">
-<li><a class="hover:text-white transition-colors" href="#">Web Development</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Mobile App Development</a></li>
-<li><a class="hover:text-white transition-colors" href="#">UI/UX Design</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Product Strategy</a></li>
-<li><a class="hover:text-white transition-colors" href="#">MVP Development</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-bold mb-6">Company</h4>
-<ul class="space-y-3 text-sm text-gray-400">
-<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Careers</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Case Studies</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Blog</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Contact</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-bold mb-6">Let's build something</h4>
-<p class="text-gray-400 text-sm mb-4">Ready to start your project? Get in touch with our team.</p>
-<a class="inline-block bg-primary hover:bg-orange-600 text-white text-sm font-semibold px-6 py-3 rounded-lg transition-colors w-full text-center" href="#">
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white"
+                            href="#">
+                            <span class="material-icons-outlined text-sm">alternate_email</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white"
+                            href="#">
+                            <span class="material-icons-outlined text-sm">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">Web Development</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Mobile App Development</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">UI/UX Design</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Product Strategy</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">MVP Development</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Case Studies</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Blog</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Let's build something</h4>
+                    <p class="text-gray-400 text-sm mb-4">Ready to start your project? Get in touch with our team.</p>
+                    <a class="inline-block bg-primary hover:bg-orange-600 text-white text-sm font-semibold px-6 py-3 rounded-lg transition-colors w-full text-center"
+                        href="#">
                         Start a Project
                     </a>
-</div>
-</div>
-<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="text-gray-500 text-xs">© 2024 Makeship.dev Agency. All rights reserved.</p>
-<div class="flex gap-6 text-gray-500 text-xs">
-<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
-</div>
-</div>
-</div>
-</footer>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs">© 2024 Makeship.dev Agency. All rights reserved.</p>
+                <div class="flex gap-6 text-gray-500 text-xs">
+                    <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-</body></html>
+</body>
+
+</html>

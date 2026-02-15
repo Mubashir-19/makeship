@@ -22,7 +22,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            <a 
+            <a
               href="#contact"
               className="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all transform hover:scale-105 shadow-lg shadow-orange-500/30"
             >
@@ -31,7 +31,7 @@ const Navbar = () => {
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
-            <button 
+            <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-gray-300 hover:text-white p-2"
             >

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Phases = () => {
   return (
-    <section id="process" className="relative bg-background-dark text-white rounded-[3rem] lg:rounded-[5rem] overflow-hidden my-8 mx-4 lg:mx-8 pt-24 pb-32">
+    <section id="process" className="relative bg-background-dark text-white rounded-[3rem] lg:rounded-[5rem] overflow-hidden  pt-24 pb-32">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-12 bg-background-light dark:bg-background-dark rounded-b-full"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">

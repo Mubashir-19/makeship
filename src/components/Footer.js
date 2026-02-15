@@ -3,9 +3,9 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-background-dark text-white pt-24 pb-12 border-t border-white/10 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full -mt-1 text-gray-50 dark:text-[#0f1115]">
-        <svg className="w-full h-12 md:h-20 fill-current transform rotate-180" preserveAspectRatio="none" viewBox="0 0 1440 74" xmlns="http://www.w3.org/2000/svg">
+    <footer id="contact" className="bg-background-dark text-white pt-24 pb-12 border-white/10 relative overflow-hidden">
+      <div className="absolute -top-[1px] left-0 w-full text-gray-50 dark:text-[#0f1115]">
+        <svg className="block w-full h-12 md:h-20 fill-current transform rotate-180" preserveAspectRatio="none" viewBox="0 0 1440 74" xmlns="http://www.w3.org/2000/svg">
           <path d="M456.464 0.0433865C277.158 -1.70575 0 50.0141 0 50.0141V74H1440V50.0141C1440 50.0141 1320.4 31.1925 1243.09 27.0276C1099.33 19.2816 1019.08 53.1981 875.138 50.0141C710.527 46.3727 621.108 1.64949 456.464 0.0433865Z"></path>
         </svg>
       </div>
@@ -17,9 +17,11 @@ const Footer = () => {
               We partner with ambitious startups to design, build, and scale world-class digital products.
             </p>
             <div className="flex gap-4">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white">
                 <span className="material-icons-outlined text-sm">alternate_email</span>
               </a>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white">
                 <span className="material-icons-outlined text-sm">share</span>
               </a>
@@ -28,20 +30,30 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6">Services</h4>
             <ul className="space-y-3 text-sm text-gray-400">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <li><a href="#" className="hover:text-white transition-colors">Web Development</a></li>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <li><a href="#" className="hover:text-white transition-colors">Mobile App Development</a></li>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <li><a href="#" className="hover:text-white transition-colors">UI/UX Design</a></li>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <li><a href="#" className="hover:text-white transition-colors">Product Strategy</a></li>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <li><a href="#" className="hover:text-white transition-colors">MVP Development</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-bold mb-6">Company</h4>
             <ul className="space-y-3 text-sm text-gray-400">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <li><a href="#" className="hover:text-white transition-colors">Case Studies</a></li>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
@@ -56,7 +68,9 @@ const Footer = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-xs">© 2024 Makeship.dev Agency. All rights reserved.</p>
           <div className="flex gap-6 text-gray-500 text-xs">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>

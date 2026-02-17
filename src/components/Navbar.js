@@ -1,15 +1,24 @@
 // src/components/Navbar.js
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    navigate('/');
+    window.scrollTo(0, 0);
+  };
+
 
   return (
     <nav className="fixed w-full z-50 bg-background-dark/90 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <span className="text-2xl font-display font-bold text-white tracking-tight cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+            <span className="text-2xl font-display font-bold text-white tracking-tight cursor-pointer" onClick={handleLogoClick}>
               makeship<span className="text-primary">.dev</span>
             </span>
           </div>
@@ -17,7 +26,7 @@ const Navbar = () => {
             <div className="ml-10 flex items-baseline space-x-8">
               <a href="#services" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
               <a href="#process" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Our Process</a>
-              <a href="#work" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Work</a>
+              <Link to="/case-studies" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Case Studies</Link>
               <a href="#insights" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Insights</a>
             </div>
           </div>
@@ -46,7 +55,7 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
             <a href="#process" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Our Process</a>
-            <a href="#work" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Work</a>
+            <Link to="/case-studies" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Case Studies</Link>
             <a href="#insights" onClick={() => setMobileMenuOpen(false)} className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Insights</a>
             <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-primary font-bold block px-3 py-2 rounded-md text-base">Get in Touch</a>
           </div>

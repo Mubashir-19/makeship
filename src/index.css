@@ -1,20 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .curve-divider-top {
@@ -23,7 +27,7 @@ code {
   overflow: hidden;
 }
 .curve-divider-top::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -45,16 +49,25 @@ code {
   bottom: 0;
   width: 50%;
   height: 100%;
-  background: radial-gradient(circle at 100% 0%, transparent 40px, currentColor 41px);
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent 40px,
+    currentColor 41px
+  );
   left: 0;
-  color: inherit;}
+  color: inherit;
+}
 .concave-divider::after {
   content: "";
   position: absolute;
   bottom: 0;
   width: 50%;
   height: 100%;
-  background: radial-gradient(circle at 0% 0%, transparent 40px, currentColor 41px);
+  background: radial-gradient(
+    circle at 0% 0%,
+    transparent 40px,
+    currentColor 41px
+  );
   right: 0;
   color: inherit;
 }

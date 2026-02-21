@@ -37,6 +37,7 @@ const Contact = () => {
         setSubmitting(true);
 
         const formData = new FormData(e.target);
+        formData.append('security_token', 'makeship_secure_2024_xyz'); // Matches Apps Script SHARED_SECRET
         const scriptUrl = 'https://script.google.com/macros/s/AKfycbzoBjgeRM9mv-miCWd2VBrLNPRsxpXXawJtrpq0Z4NF1WTw2SATy_Fj5tfer6EMrMz0Rw/exec';
 
         try {

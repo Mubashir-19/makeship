@@ -4,11 +4,6 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer id="contact" className="bg-background-dark text-white pt-24 pb-12 border-white/10 relative overflow-hidden">
-      <div className="absolute -top-[1px] left-0 w-full text-gray-50 dark:text-[#0f1115]">
-        <svg className="block w-full h-12 md:h-20 fill-current transform rotate-180" preserveAspectRatio="none" viewBox="0 0 1440 74" xmlns="http://www.w3.org/2000/svg">
-          <path d="M456.464 0.0433865C277.158 -1.70575 0 50.0141 0 50.0141V74H1440V50.0141C1440 50.0141 1320.4 31.1925 1243.09 27.0276C1099.33 19.2816 1019.08 53.1981 875.138 50.0141C710.527 46.3727 621.108 1.64949 456.464 0.0433865Z"></path>
-        </svg>
-      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>

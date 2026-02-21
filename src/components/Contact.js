@@ -298,10 +298,10 @@ const Contact = () => {
                                 <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6 flex items-center gap-2">
                                     <MessageSquare className="w-4 h-4 text-primary" /> Additional Details
                                 </h3>
-                                <textarea 
-                                    name="additional_details" 
-                                    rows="6" 
-                                    placeholder="Any specific requirements, budget range, or timeline expectations?" 
+                                <textarea
+                                    name="additional_details"
+                                    rows="6"
+                                    placeholder="Any specific requirements, budget range, or timeline expectations?"
                                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-text-dark focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-all outline-none resize-none placeholder-gray-600 font-sans"
                                 ></textarea>
                             </div>
@@ -320,7 +320,7 @@ const Contact = () => {
                                     {submitting ? 'Preparing Launch...' : submitted ? 'Mission Received!' : 'Launch Project'}
                                 </span>
                             </button>
-                            
+
                             {submitted && (
                                 <p className="text-center text-sm text-green-500 font-medium animate-in fade-in slide-in-from-top-2">
                                     We'll be in touch within 24 hours. Get ready.

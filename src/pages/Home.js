@@ -4,13 +4,15 @@ import ClientLogos from '../components/ClientLogos';
 import Philosophy from '../components/Philosophy';
 import Phases from '../components/Phases';
 import Services from '../components/Services';
+import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <ClientLogos />
+      <Projects />
+      {/* <ClientLogos /> */}
       <Philosophy />
       <Phases />
       <Services />

@@ -26,6 +26,7 @@ code {
   height: 60px;
   overflow: hidden;
 }
+
 .curve-divider-top::after {
   content: "";
   position: absolute;
@@ -37,37 +38,36 @@ code {
   border-radius: 50% 50% 0 0;
   background-color: inherit;
 }
+
 .concave-divider {
   position: relative;
   height: 80px;
   background: transparent;
   overflow: hidden;
 }
+
 .concave-divider::before {
   content: "";
   position: absolute;
   bottom: 0;
   width: 50%;
   height: 100%;
-  background: radial-gradient(
-    circle at 100% 0%,
-    transparent 40px,
-    currentColor 41px
-  );
+  background: radial-gradient(circle at 100% 0%,
+      transparent 40px,
+      currentColor 41px);
   left: 0;
   color: inherit;
 }
+
 .concave-divider::after {
   content: "";
   position: absolute;
   bottom: 0;
   width: 50%;
   height: 100%;
-  background: radial-gradient(
-    circle at 0% 0%,
-    transparent 40px,
-    currentColor 41px
-  );
+  background: radial-gradient(circle at 0% 0%,
+      transparent 40px,
+      currentColor 41px);
   right: 0;
   color: inherit;
 }

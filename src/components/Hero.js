@@ -15,7 +15,7 @@ const Hero = () => {
               </span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-8">
-              Empowering startups to launch, scale, and{" "}
+              Empowering businesses to launch, scale, and{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-300">
                 succeed faster
               </span>

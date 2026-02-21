@@ -39,7 +39,6 @@ const projectData = [
     thumbnail: egg1,
     images: [egg1, egg2, egg3, egg4, egg5],
     tags: ["Infrastructure", "Cloud", "SaaS"],
-    liveUrl: "https://nest.eggsplain.com",
   },
   {
     id: 2,
@@ -49,7 +48,6 @@ const projectData = [
     thumbnail: fluuz1,
     images: [fluuz1, fluuz2, fluuz3, fluuz4],
     tags: ["Blockchain", "Web3", "Finance"],
-    liveUrl: "https://bank.fluuz.com",
   },
   {
     id: 3,
@@ -59,7 +57,6 @@ const projectData = [
     thumbnail: smile1,
     images: [smile1, smile2, smile3, smile4, smile5, smile6, smile7, smile8],
     tags: ["Healthcare", "AI", "Mobile"],
-    liveUrl: "https://app.smilereveal.io",
   },
   {
     id: 4,
@@ -69,7 +66,6 @@ const projectData = [
     thumbnail: tie2,
     images: [tie2, tie1, tie3],
     tags: ["Productivity", "Utility", "DevTools"],
-    liveUrl: null, // Proprietary
   },
 ];
 
@@ -144,23 +140,9 @@ const Projects = () => {
                     {project.title}
                   </h3>
                   <div className="pt-2">
-                    {project.liveUrl ? (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-bold text-primary flex items-center gap-1 group-hover:gap-2 transition-all hover:text-orange-600"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        VISIT LIVE SITE
-                        <span className="material-icons-outlined text-sm">north_east</span>
-                      </a>
-                    ) : (
-                      <span className="text-[10px] font-bold text-gray-500 flex items-center gap-1 uppercase tracking-widest opacity-60">
-                        <span className="material-icons-outlined text-[14px]">lock</span>
-                        Proprietary Software
-                      </span>
-                    )}
+                    <span className="material-icons-outlined text-gray-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
+                      north_east
+                    </span>
                   </div>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium">

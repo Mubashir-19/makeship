@@ -1,6 +1,7 @@
 // src/components/Projects.js
 import React, { useState, useEffect } from "react";
 import "./Projects.css";
+import { lockScroll, unlockScroll } from "../utils/scroll";
 
 // Eggsplain Images
 import egg1 from "../assets/portfolio/eggsplain cloud/eggsplain eggstore.png";
@@ -75,11 +76,9 @@ const Projects = () => {
 
   // Lock body scroll when modal is open
   useEffect(() => {
-    if (selectedProject) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+    if (!selectedProject) return;
+    lockScroll();
+    return () => unlockScroll();
   }, [selectedProject]);
 
   const openGallery = (project) => {

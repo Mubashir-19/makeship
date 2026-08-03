@@ -7,6 +7,7 @@ import CaseStudiesPage from './pages/CaseStudiesPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import Footer from './components/Footer';
+import LeadPopup from './components/LeadPopup';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <LeadPopup />
       </div>
     </Router>
   );

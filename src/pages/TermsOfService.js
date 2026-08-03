@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { resetScroll } from '../utils/scroll';
 
 const Section = ({ title, children }) => (
     <div className="mb-10">
@@ -9,7 +10,7 @@ const Section = ({ title, children }) => (
 
 const TermsOfService = () => {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        resetScroll();
     }, []);
 
     return (

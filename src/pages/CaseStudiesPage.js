@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import { resetScroll } from '../utils/scroll';
 
 const CaseStudiesPage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    resetScroll();
   }, []);
 
   return (

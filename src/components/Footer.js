@@ -1,5 +1,6 @@
 // src/components/Footer.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -63,10 +64,8 @@ const Footer = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-xs">© 2024 Makeship.dev Agency. All rights reserved.</p>
           <div className="flex gap-6 text-gray-500 text-xs">
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
